@@ -57,7 +57,7 @@ const models : model[] = [
 
 export default function Display() {
   return (
-    <section className="w-full grid grid-cols-4 gap-3">
+    <section className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 gap-4 md:mt-8 mt-4">
       {models.map(model => (
         <CardItem key={model.id} model={model}/>
       ))}

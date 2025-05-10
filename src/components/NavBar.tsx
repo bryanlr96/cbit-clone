@@ -2,7 +2,7 @@
 
 export default function NavBar() {
   return (
-    <nav className="w-64 lg:flex hidden h-screen flex-col sticky top-0 rounded-tr-[40px] rounded-br-[40px] bg-[#E3ECFF] items-center">
+    <nav className="w-64 lg:flex hidden min-h-screen flex-col sticky top-0 rounded-tr-[40px] rounded-br-[40px] bg-[#E3ECFF] items-center">
       <a href="#" className="mx-auto">
         <img src="./Logo.png" alt="logo" className="py-4 w-[180px]" />
       </a>
