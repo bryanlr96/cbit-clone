@@ -1,5 +1,3 @@
 ## ToDo
 
-- Crear footer
-- Cambiar boton de cartItem para que sea absolute
-- Hacer responsive pag principal
+- Trabajar en el display con flex y flex-wrap, las cards con tamaños fijos
