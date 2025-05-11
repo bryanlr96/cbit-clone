@@ -1,7 +1,6 @@
 ## ToDo
 
-- Crear footer
-- usar reactdom
-- configurar nav para que se visualice en la pagina actual
-- cambiar navmain por headermain
-- 
+- Crear footer ✔️
+- Cambiar navmain por header
+- Usar reactdom
+- Configurar nav para que se visualice en la pagina actual
