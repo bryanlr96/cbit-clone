@@ -1,5 +1,6 @@
 ## ToDo
 
+- CardItem reutilizables✔️
 - Crear footer ✔️
 - Cambiar navmain por header ✔️
 - Usar reactdom✔️
