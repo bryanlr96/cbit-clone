@@ -1,3 +1,7 @@
 ## ToDo
 
-- Trabajar en el display con flex y flex-wrap, las cards con tamaños fijos
+- Crear footer
+- usar reactdom
+- configurar nav para que se visualice en la pagina actual
+- cambiar navmain por headermain
+- 
