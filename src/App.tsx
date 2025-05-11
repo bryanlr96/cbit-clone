@@ -3,7 +3,7 @@ import Display from "./components/Display"
 import Footer from "./components/Footer"
 import GetStarted from "./components/GetStarted"
 import NavBar from "./components/NavBar"
-import NavMain from "./components/NavMain"
+import NavMain from "./components/Header"
 
 function App() {
   return (
