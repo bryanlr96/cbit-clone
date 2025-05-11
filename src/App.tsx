@@ -1,22 +1,15 @@
-
-import Display from "./components/Display"
-import Footer from "./components/Footer"
-import GetStarted from "./components/GetStarted"
-import NavBar from "./components/NavBar"
-import NavMain from "./components/Header"
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";  // Asegúrate de importar Layout
+import Playground from "./pages/Playground";
 
 function App() {
   return (
-    <div className="flex">
-      <NavBar />
-      <div className="w-[80%] mx-auto flex flex-col">
-        <NavMain/>
-        <GetStarted/>
-        <Display/>
-        <Footer/>
-      </div>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Layout />}> 
+        <Route path="/" element={<Playground />} /> 
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;
