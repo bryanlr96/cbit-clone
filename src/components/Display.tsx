@@ -10,7 +10,7 @@ const models : model[] = [
     title: 'Merlin Generator',
     description: 'Generates unlimited data in just seconds with good quality.',
     category: 'The Extender',
-    banner: 'fondo1.png',
+    banner: 1,
     icon: 'icon'
   },
   {
@@ -18,7 +18,7 @@ const models : model[] = [
     title: 'Gold Generator',
     description: 'Generates 200 entries in a very short time and with great quality',
     category: 'The Extender',
-    banner: 'fondo2.png',
+    banner: 2,
     icon: 'icon'
   },
   {
@@ -26,7 +26,7 @@ const models : model[] = [
     title: 'Elixir Generator',
     description: 'Generates 50 entries of perfect quality and with a great relationship between variables',
     category: 'The Extender',
-    banner: 'fondo3.png',
+    banner: 3,
     icon: 'icon'
   },
   {
@@ -34,7 +34,7 @@ const models : model[] = [
     title: 'Oracle Generator',
     description: 'Generates 25 entries on recent and real information in just seconds',
     category: 'The Extender',
-    banner: 'fondo4.png',
+    banner: 4,
     icon: 'icon'
   },
   {
@@ -42,7 +42,7 @@ const models : model[] = [
     title: 'The Extender',
     description: 'Extends files, documents and entries, simply provide the documents you want to extend...',
     category: 'The Extender',
-    banner: 'fondo5.png',
+    banner: 5,
     icon: 'icon'
   },
   {
@@ -50,7 +50,7 @@ const models : model[] = [
     title: 'The Predictor',
     description: 'Predicts data and information from files and previous documentation, choose what you...',
     category: 'The Predictor',
-    banner: 'fondo6.png',
+    banner: 6,
     icon: 'icon'
   },
 ]

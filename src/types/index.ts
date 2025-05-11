@@ -3,6 +3,6 @@ export type model = {
   title: string,
   description: string,
   category: string,
-  banner: string,
+  banner: number,
   icon: string
 }
