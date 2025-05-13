@@ -4,6 +4,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 
+
+import '../styles/icomoon.css'
+
 export default function Layout() {
   return (
     <div className="flex">
