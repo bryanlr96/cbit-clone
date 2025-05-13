@@ -1,7 +1,13 @@
 ## ToDo
 
+- CardItem reutilizables✔️
 - Crear footer ✔️
 - Cambiar navmain por header ✔️
 - Usar reactdom✔️
 - crear layout ✔️
-- Configurar nav para que se visualice en la pagina actual
+- Configurar nav para que se visualice en la pagina actual✔️
+- Incluir libreria icomoon
+- Hacer componentes los links del nav
+- Cambiar el header para que funcione por parametros
+- Crear la nav mobile
+- crear resto de paginas
