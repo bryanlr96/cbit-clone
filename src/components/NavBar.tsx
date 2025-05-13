@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import type { category, link } from "../types";
+import { Fragment, useId } from "react";
 
 export default function NavBar() {
 
@@ -31,7 +32,7 @@ export default function NavBar() {
 
 
   return (
-    <nav className="w-64 lg:flex hidden min-h-screen flex-col sticky top-0 rounded-tr-[40px] rounded-br-[40px] bg-[#E3ECFF] items-center">
+    <nav className="w-64 lg:flex hidden h-screen flex-col sticky top-0 rounded-tr-[40px] rounded-br-[40px] bg-[#E3ECFF] items-center">
       <a href="#" className="mx-auto">
         <img src="./Logo.png" alt="logo" className="py-4 w-[180px]" />
       </a>
@@ -41,7 +42,7 @@ export default function NavBar() {
           const linksCategory = links.filter(link => link.category.title === category.title)
           linksCategory.sort((a, b) => a.priority - b.priority)
           return (
-            <>
+            <Fragment key={useId()}>
               {category.subitle && (
                 <div className="w-full">
                   <span className="text-xs text-[#414042] pb-3 ml-4">{category.subitle}</span>
@@ -49,16 +50,16 @@ export default function NavBar() {
               )}
               <ul className="pl-8 w-full text-sm text-[#414042]">
                 {linksCategory.map(link => (
-                  <li className={isActive(link.slug) ? "bg-white rounded-l-[30px] p-1 text-white" : ""}>
-                    <a href={link.slug} className={isActive(link.slug) ? " w-full flex items-center py-2 px-4  gap-3 my-[5px] rounded-l-[30px] bg-gradient-to-r from-[#5183f0] to-white" : " w-full flex items-center py-2 px-4  gap-3 my-[5px] rounded-l-[30px]"}>
+                  <li key={useId()} className={isActive(link.slug) ? "bg-white rounded-l-[30px] p-1 text-white" : ""}>
+                    <a href={link.slug} className={isActive(link.slug) ? " w-full flex items-center py-2 px-4  gap-3 my-[5px] rounded-l-[30px] bg-gradient-to-r from-[#5183f0] to-white" : " w-full flex items-center py-1 px-4  gap-3 my-[5px] rounded-l-[30px]"}>
                       <i className={link.icon} />
                       {link.title}
                     </a>
                   </li>
                 ))}
               </ul>
-              <span className="line min-h-[1px] w-[80%] bg-gradient-to-r from-blue-600 to-transparent my-3 last:hidden" />
-            </>
+              <span className="line h-[1px] w-[80%] bg-gradient-to-r from-blue-600 to-transparent my-3 last:hidden" />
+            </Fragment>
           )
         })
       }

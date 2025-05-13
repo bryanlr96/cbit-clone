@@ -3,7 +3,7 @@ import { useState } from 'react'
 export default function Header() {
     const [count, setCount] = useState(0)
     return (
-        <header className="px-4 py-6 shadow-[4px_4px_32px_0px_#5183f014] flex items-center justify-between">
+        <header className="px-4 py-6 shadow-[4px_4px_32px_0px_#5183f014] flex items-center justify-between sticky top-0 bg-white">
             <div>
                 <h2 className="text-[26px] font-medium">Welcome Wood!</h2>
                 <span className="text-[#414042] flex items-center gap-1">

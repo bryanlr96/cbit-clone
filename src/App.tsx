@@ -12,7 +12,7 @@ function App() {
         <Route path="/projects" element={<WorkInProgress />} /> 
         <Route path="/blueprints" element={<WorkInProgress />} /> 
         <Route path="/workflows" element={<WorkInProgress />} /> 
-        <Route path="/connection" element={<WorkInProgress />} /> 
+        <Route path="/connections" element={<WorkInProgress />} /> 
         <Route path="/generator" element={<WorkInProgress />} /> 
         <Route path="/predictor" element={<WorkInProgress />} /> 
         <Route path="/extender" element={<WorkInProgress />} /> 
