@@ -1,23 +1,35 @@
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import { useActiveLink } from '../hooks/useActiveLink'
 
 export default function Header() {
+    const location = useLocation()
     const [count, setCount] = useState(0)
+    const link = useActiveLink()
     return (
         <header className="px-4 py-6 shadow-[4px_4px_32px_0px_#5183f014] flex items-center justify-between sticky top-0 bg-white">
-            <div>
-                <h2 className="text-[26px] font-medium">Welcome Wood!</h2>
-                <span className="text-[#414042] flex items-center gap-1">
-                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[16px] h-[16px] stroke-[#414042] ">
-                        <path d="M6.66667 2H2V8H6.66667V2Z" strokeLinecap="round" strokeLinejoin="round"></path><path d="M13.9997 2H9.33301V5.33333H13.9997V2Z" strokeLinecap="round" strokeLinejoin="round"></path><path d="M13.9997 8H9.33301V14H13.9997V8Z" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M6.66667 10.6667H2V14H6.66667V10.6667Z" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    {count} projects
-                </span>
-            </div>
+            {location.pathname === '/' ? (
+                <div>
+                    <h2 className="text-[26px] font-medium">Welcome Wood!</h2>
+                    <span className="text-[#414042] flex items-center gap-1">
+                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[16px] h-[16px] stroke-[#414042] ">
+                            <path d="M6.66667 2H2V8H6.66667V2Z" strokeLinecap="round" strokeLinejoin="round"></path><path d="M13.9997 2H9.33301V5.33333H13.9997V2Z" strokeLinecap="round" strokeLinejoin="round"></path><path d="M13.9997 8H9.33301V14H13.9997V8Z" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M6.66667 10.6667H2V14H6.66667V10.6667Z" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        {count} projects
+                    </span>
+                </div>
+            ) : (
+                <h2 className='text-[26px] font-medium'> <i className={link?.icon}/> {link?.title}</h2>
+            )}
 
-            <form>
-                <input type="text" id="search" name="search" className="outline-none border border-[#BCBEC0] rounded-[40px] w-[300px] pl-8 pr-4 py-2 text-[#BCBEC0] text-sm placeholder:text-[#BCBEC0]" />
-            </form>
+
+            {location.pathname === '/' && (
+                <form>
+                    <input type="text" id="search" name="search" className="outline-none border border-[#BCBEC0] rounded-[40px] w-[300px] pl-8 pr-4 py-2 text-[#BCBEC0] text-sm placeholder:text-[#BCBEC0]" />
+                </form>
+            )}
+
 
             <div className=" flex gap-3">
                 <button className="p-3 rounded-full bg-white shadow-[3.33px_3.33px_26.67px_0px_#00000014] w-[50px] h-[50px] flex items-center justify-center cursor-pointer">
