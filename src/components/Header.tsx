@@ -7,9 +7,17 @@ export default function Header() {
     const [count, setCount] = useState(0)
     const link = useActiveLink()
     return (
+
         <header className="px-4 py-6 shadow-[4px_4px_32px_0px_#5183f014] flex items-center justify-between sticky top-0 bg-white">
+            <a href="#" className="lg:hidden">
+                <img src="./Logo.png" alt="logo" className="w-[180px]" />
+            </a>
+
+            <button>
+                <i className='icon-connections text-[26px] font-medium'/>
+            </button>
             {location.pathname === '/' ? (
-                <div>
+                <div className='hidden lg:flex flex-col'>
                     <h2 className="text-[26px] font-medium">Welcome Wood!</h2>
                     <span className="text-[#414042] flex items-center gap-1">
                         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[16px] h-[16px] stroke-[#414042] ">
@@ -20,12 +28,12 @@ export default function Header() {
                     </span>
                 </div>
             ) : (
-                <h2 className='text-[26px] font-medium'> <i className={link?.icon}/> {link?.title}</h2>
+                <h2 className='hidden lg:flex text-[26px] font-medium'> <i className={link?.icon} /> {link?.title}</h2>
             )}
 
 
             {location.pathname === '/' && (
-                <form className='border-[#BCBEC0] border  rounded-[40px] flex pr-4 py-2'>
+                <form className='hidden border-[#BCBEC0] border  rounded-[40px] lg:flex pr-4 py-2'>
                     <input type="text" id="search" name="search" className="outline-none  w-[300px] pl-4  text-[#BCBEC0] text-sm placeholder:text-[#BCBEC0]" placeholder='Search' />
                     <button className='border-l-1 border-[#BCBEC0] pl-3 flex items-center cursor-pointer'>
                         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="stroke-[#BCBEC0] w-[16px] h-[16px]"><path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#BCBEC0" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13.9996 13.9996L11.0996 11.0996" stroke="#BCBEC0" stroke-linecap="round" stroke-linejoin="round"></path></svg>
@@ -34,7 +42,7 @@ export default function Header() {
             )}
 
 
-            <div className=" flex gap-3">
+            <div className="hidden lg:flex gap-3">
                 <button className="p-3 rounded-full bg-white shadow-[3.33px_3.33px_26.67px_0px_#00000014] w-[50px] h-[50px] flex items-center justify-center cursor-pointer">
                     <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[17px] h-[17px] stroke-[#414042] ">
                         <path d="M2.05664 2.75H6.22331C6.96002 2.75 7.66656 3.04266 8.18749 3.56359C8.70843 4.08453 9.00108 4.79107 9.00108 5.52778V15.25C9.00108 14.6975 8.78159 14.1676 8.39089 13.7769C8.00019 13.3862 7.47029 13.1667 6.91775 13.1667H2.05664V2.75Z" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"></path><path d="M15.9444 2.75H11.7778C11.0411 2.75 10.3345 3.04266 9.81359 3.56359C9.29266 4.08453 9 4.79107 9 5.52778V15.25C9 14.6975 9.21949 14.1676 9.61019 13.7769C10.0009 13.3862 10.5308 13.1667 11.0833 13.1667H15.9444V2.75Z" strokeWidth="0.833333" strokeLinecap="round" strokeLinejoin="round" />

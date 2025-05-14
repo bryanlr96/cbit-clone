@@ -11,7 +11,7 @@ export default function Layout() {
   return (
     <div className="flex">
       <NavBar />
-      <div className="w-[80%] mx-auto flex flex-col">
+      <div className="w-[95%] lg:w-[80%] mx-auto flex flex-col">
         <Header />
         <Outlet />
         <Footer />
