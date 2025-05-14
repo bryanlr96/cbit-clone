@@ -25,8 +25,11 @@ export default function Header() {
 
 
             {location.pathname === '/' && (
-                <form>
-                    <input type="text" id="search" name="search" className="outline-none border border-[#BCBEC0] rounded-[40px] w-[300px] pl-8 pr-4 py-2 text-[#BCBEC0] text-sm placeholder:text-[#BCBEC0]" />
+                <form className='border-[#BCBEC0] border  rounded-[40px] flex pr-4 py-2'>
+                    <input type="text" id="search" name="search" className="outline-none  w-[300px] pl-4  text-[#BCBEC0] text-sm placeholder:text-[#BCBEC0]" placeholder='Search' />
+                    <button className='border-l-1 border-[#BCBEC0] pl-3 flex items-center cursor-pointer'>
+                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="stroke-[#BCBEC0] w-[16px] h-[16px]"><path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#BCBEC0" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13.9996 13.9996L11.0996 11.0996" stroke="#BCBEC0" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </button>
                 </form>
             )}
 
