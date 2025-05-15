@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { useState, type Dispatch } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useActiveLink } from '../hooks/useActiveLink'
 
-export default function Header() {
+type HeaderProps = {
+    setMobileOpen: Dispatch<React.SetStateAction<boolean>>
+}
+
+export default function Header({setMobileOpen}: HeaderProps) {
     const location = useLocation()
     const [count, setCount] = useState(0)
     const link = useActiveLink()
@@ -13,7 +17,7 @@ export default function Header() {
                 <img src="./Logo.png" alt="logo" className="w-[180px]" />
             </a>
 
-            <button>
+            <button className='lg:hidden' onClick={()=> {setMobileOpen(true)}}>
                 <i className='icon-connections text-[26px] font-medium'/>
             </button>
             {location.pathname === '/' ? (
