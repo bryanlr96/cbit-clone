@@ -48,13 +48,23 @@ export default function NavMovile({ mobileOpen, setMobileOpen }: NavMovileProps)
         }
     }, [mobileOpen]);
 
+    useEffect(() => {
+        if (mobileOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [mobileOpen]);
+
     return (
         <div
-            className={`fixed top-0 left-0 w-screen h-screen z-50 flex lg:hidden transition-transform duration-500
-        ${mobileOpen && !isClosing ? 'translate-x-0' : '-translate-x-full'}
-      `}
+            className={`fixed top-0 left-0 w-screen h-screen z-50 flex lg:hidden transition-transform duration-500 ${mobileOpen && !isClosing ? 'translate-x-0' : '-translate-x-full'}`}
         >
-            <nav className="w-64 h-screen bg-white flex flex-col shadow-md">
+            <nav className="w-68 h-screen bg-white flex flex-col shadow-md overflow-y-auto scrollbar-none">
                 <a href="#" className="mx-auto">
                     <img src="./Logo.png" alt="logo" className="pt-2 pb-6 w-[180px]" />
                 </a>
