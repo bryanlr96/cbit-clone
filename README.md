@@ -9,5 +9,6 @@
 - Incluir libreria icomoon (con placeholder) ✔️
 - Hacer componentes los links del nav✔️
 - Cambiar el header para que funcione por parametros✔️
-- Crear la nav mobile
-- crear resto de paginas
+- Crear la nav mobile {falta por quitar el width del scrollbar, controlar cuando se abre y cuando se cierra}
+    
+- crear resto de páginas
