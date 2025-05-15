@@ -33,14 +33,6 @@ export default function NavMovile({ mobileOpen, setMobileOpen }: NavMovileProps)
     const location = useLocation();
     const isActive = (path: string) => location.pathname === path;
 
-    const handleClose = () => {
-        setIsClosing(true);
-        setTimeout(() => {
-            setIsClosing(false);
-            setMobileOpen(false);
-        }, 300);
-    };
-
     useEffect(() => {
         if (mobileOpen) {
             setShowOverlay(true);
